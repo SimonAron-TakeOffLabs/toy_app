@@ -10,5 +10,10 @@
   <%= @user.email %>
 </p>
 
+<div>
+<h1>First post:</h1>
+<p><%= @first_post.content %></p>
+</div>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

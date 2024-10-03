@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  has_many :microposts
   before_action :set_user, only: %i[ show edit update destroy ]
 
   # GET /users or /users.json
@@ -9,6 +8,7 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    @first_post = @user.microposts.first
   end
 
   # GET /users/new
